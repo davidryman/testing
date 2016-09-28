@@ -52,7 +52,7 @@
             }
         },
         {
-            "data": "flowhub.json",
+            "data": "testdata.txt",
             "tgt": {
                 "process": "filesystem/ReadFile_3e634",
                 "port": "in"

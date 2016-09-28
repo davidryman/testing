@@ -51,7 +51,7 @@
             }
         },
         {
-            "data": "testdata",
+            "data": "testdata.txt",
             "tgt": {
                 "process": "filesystem/ReadFile_j1c38",
                 "port": "in"
