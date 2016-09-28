@@ -10,22 +10,22 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "core/Kick_wjzjf": {
-            "component": "core/Kick",
-            "metadata": {
-                "label": "Kick",
-                "x": 756,
-                "y": 252,
-                "width": 72,
-                "height": 72
-            }
-        },
         "core/Output_dkeog": {
             "component": "core/Output",
             "metadata": {
                 "label": "Output",
-                "x": 900,
-                "y": 252,
+                "x": 288,
+                "y": -36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "filesystem/ReadFile_wanj3": {
+            "component": "filesystem/ReadFile",
+            "metadata": {
+                "label": "ReadFile",
+                "x": 108,
+                "y": -36,
                 "width": 72,
                 "height": 72
             }
@@ -34,7 +34,7 @@
     "connections": [
         {
             "src": {
-                "process": "core/Kick_wjzjf",
+                "process": "filesystem/ReadFile_wanj3",
                 "port": "out"
             },
             "tgt": {
@@ -44,10 +44,17 @@
             "metadata": {}
         },
         {
-            "data": "\"hello duckie\"",
+            "data": "utf-8",
             "tgt": {
-                "process": "core/Kick_wjzjf",
-                "port": "data"
+                "process": "filesystem/ReadFile_wanj3",
+                "port": "encoding"
+            }
+        },
+        {
+            "data": "testdata",
+            "tgt": {
+                "process": "filesystem/ReadFile_wanj3",
+                "port": "in"
             }
         }
     ]
