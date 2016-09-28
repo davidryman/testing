@@ -15,8 +15,8 @@
             "component": "core/Output",
             "metadata": {
                 "label": "",
-                "x": 216,
-                "y": 72,
+                "x": 144,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -25,8 +25,18 @@
             "component": "filesystem/ReadFile",
             "metadata": {
                 "label": "ReadFile",
-                "x": 72,
-                "y": 72,
+                "x": 36,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "filesystem/Stat_ost33": {
+            "component": "filesystem/Stat",
+            "metadata": {
+                "label": "Stat",
+                "x": 36,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
@@ -36,6 +46,17 @@
         {
             "src": {
                 "process": "filesystem/ReadFile_3e634",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "filesystem/Stat_ost33",
                 "port": "out"
             },
             "tgt": {
@@ -55,6 +76,13 @@
             "data": "testdata.txt",
             "tgt": {
                 "process": "filesystem/ReadFile_3e634",
+                "port": "in"
+            }
+        },
+        {
+            "data": "testdata.txt",
+            "tgt": {
+                "process": "filesystem/Stat_ost33",
                 "port": "in"
             }
         }
