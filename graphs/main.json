@@ -4,28 +4,29 @@
         "name": "main",
         "environment": {
             "type": "noflo-nodejs"
-        }
+        },
+        "icon": ""
     },
     "inports": {},
     "outports": {},
     "groups": [],
     "processes": {
-        "core/Kick_wwi4l": {
+        "Kicker": {
             "component": "core/Kick",
             "metadata": {
-                "label": "Kick",
-                "x": 252,
-                "y": 72,
+                "label": "Kicker",
+                "x": 36,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
         },
-        "core/Output_ueh2y": {
+        "Console": {
             "component": "core/Output",
             "metadata": {
-                "label": "Output",
-                "x": 360,
-                "y": 72,
+                "label": "Console",
+                "x": 144,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
@@ -34,11 +35,11 @@
     "connections": [
         {
             "src": {
-                "process": "core/Kick_wwi4l",
+                "process": "Kicker",
                 "port": "out"
             },
             "tgt": {
-                "process": "core/Output_ueh2y",
+                "process": "Console",
                 "port": "in"
             },
             "metadata": {
@@ -48,7 +49,7 @@
         {
             "data": "\"test\"",
             "tgt": {
-                "process": "core/Kick_wwi4l",
+                "process": "Kicker",
                 "port": "data"
             }
         }
