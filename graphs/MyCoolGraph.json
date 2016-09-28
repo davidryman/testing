@@ -1,32 +1,31 @@
 {
     "caseSensitive": false,
     "properties": {
-        "name": "main",
+        "name": "MyCoolGraph",
         "environment": {
             "type": "noflo-nodejs"
-        },
-        "icon": ""
+        }
     },
     "inports": {},
     "outports": {},
     "groups": [],
     "processes": {
-        "": {
+        "core/Output_6yb29": {
             "component": "core/Output",
             "metadata": {
-                "label": "",
-                "x": 216,
-                "y": 72,
+                "label": "Output",
+                "x": 144,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
         },
-        "filesystem/ReadFile_3e634": {
+        "filesystem/ReadFile_j1c38": {
             "component": "filesystem/ReadFile",
             "metadata": {
                 "label": "ReadFile",
-                "x": 72,
-                "y": 72,
+                "x": 36,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
@@ -35,11 +34,11 @@
     "connections": [
         {
             "src": {
-                "process": "filesystem/ReadFile_3e634",
+                "process": "filesystem/ReadFile_j1c38",
                 "port": "out"
             },
             "tgt": {
-                "process": "",
+                "process": "core/Output_6yb29",
                 "port": "in"
             },
             "metadata": {}
@@ -47,14 +46,14 @@
         {
             "data": "utf-8",
             "tgt": {
-                "process": "filesystem/ReadFile_3e634",
+                "process": "filesystem/ReadFile_j1c38",
                 "port": "encoding"
             }
         },
         {
-            "data": "flowhub.json",
+            "data": "package.json",
             "tgt": {
-                "process": "filesystem/ReadFile_3e634",
+                "process": "filesystem/ReadFile_j1c38",
                 "port": "in"
             }
         }
