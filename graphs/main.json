@@ -25,18 +25,8 @@
             "component": "filesystem/ReadFile",
             "metadata": {
                 "label": "ReadFile",
-                "x": 36,
-                "y": 180,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "filesystem/Stat_ost33": {
-            "component": "filesystem/Stat",
-            "metadata": {
-                "label": "Stat",
-                "x": 36,
-                "y": 36,
+                "x": 0,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -51,19 +41,7 @@
             "tgt": {
                 "process": "",
                 "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "filesystem/Stat_ost33",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "",
-                "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "data": "utf-8",
@@ -76,13 +54,6 @@
             "data": "testdata.txt",
             "tgt": {
                 "process": "filesystem/ReadFile_3e634",
-                "port": "in"
-            }
-        },
-        {
-            "data": "testdata.txt",
-            "tgt": {
-                "process": "filesystem/Stat_ost33",
                 "port": "in"
             }
         }
