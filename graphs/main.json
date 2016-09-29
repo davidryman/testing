@@ -11,22 +11,22 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "": {
-            "component": "core/Output",
+        "core/Kick_wwi4l": {
+            "component": "core/Kick",
             "metadata": {
-                "label": "",
-                "x": 144,
-                "y": 144,
+                "label": "Kick",
+                "x": 252,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
         },
-        "filesystem/ReadFile_3e634": {
-            "component": "filesystem/ReadFile",
+        "core/Output_ueh2y": {
+            "component": "core/Output",
             "metadata": {
-                "label": "ReadFile",
-                "x": 0,
-                "y": 144,
+                "label": "Output",
+                "x": 360,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -35,26 +35,22 @@
     "connections": [
         {
             "src": {
-                "process": "filesystem/ReadFile_3e634",
+                "process": "core/Kick_wwi4l",
                 "port": "out"
             },
             "tgt": {
-                "process": "",
+                "process": "core/Output_ueh2y",
                 "port": "in"
+            },
+            "metadata": {
+                "route": 4
             }
         },
         {
-            "data": "utf-8",
+            "data": "\"test\"",
             "tgt": {
-                "process": "filesystem/ReadFile_3e634",
-                "port": "encoding"
-            }
-        },
-        {
-            "data": "testdata.txt",
-            "tgt": {
-                "process": "filesystem/ReadFile_3e634",
-                "port": "in"
+                "process": "core/Kick_wwi4l",
+                "port": "data"
             }
         }
     ]
