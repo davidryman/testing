@@ -3,30 +3,29 @@
     "properties": {
         "name": "main",
         "environment": {
-            "type": "noflo-nodejs"
-        },
-        "icon": ""
+            "type": "noflo-browser"
+        }
     },
     "inports": {},
     "outports": {},
     "groups": [],
     "processes": {
-        "core/Kick_wwi4l": {
-            "component": "core/Kick",
+        "prompts/Alert_nm7fv": {
+            "component": "prompts/Alert",
             "metadata": {
-                "label": "Kick",
-                "x": 252,
-                "y": 72,
+                "label": "Alert",
+                "x": 576,
+                "y": 252,
                 "width": 72,
                 "height": 72
             }
         },
-        "core/Output_ueh2y": {
-            "component": "core/Output",
+        "core/Repeat_mj4rr": {
+            "component": "core/Repeat",
             "metadata": {
-                "label": "Output",
-                "x": 360,
-                "y": 72,
+                "label": "Repeat",
+                "x": 396,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -35,22 +34,22 @@
     "connections": [
         {
             "src": {
-                "process": "core/Kick_wwi4l",
+                "process": "core/Repeat_mj4rr",
                 "port": "out"
             },
             "tgt": {
-                "process": "core/Output_ueh2y",
+                "process": "prompts/Alert_nm7fv",
                 "port": "in"
             },
             "metadata": {
-                "route": 4
+                "route": 10
             }
         },
         {
-            "data": "\"test\"",
+            "data": "\"hello world\"",
             "tgt": {
-                "process": "core/Kick_wwi4l",
-                "port": "data"
+                "process": "core/Repeat_mj4rr",
+                "port": "in"
             }
         }
     ]
