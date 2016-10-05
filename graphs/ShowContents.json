@@ -9,6 +9,53 @@
     "inports": {},
     "outports": {},
     "groups": [],
-    "processes": {},
-    "connections": []
+    "processes": {
+        "math/Multiply_rnkbi": {
+            "component": "math/Multiply",
+            "metadata": {
+                "label": "Multiply",
+                "x": 432,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Output_n3qbl": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "Output",
+                "x": 648,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "math/Multiply_rnkbi",
+                "port": "product"
+            },
+            "tgt": {
+                "process": "core/Output_n3qbl",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": 15,
+            "tgt": {
+                "process": "math/Multiply_rnkbi",
+                "port": "multiplicand"
+            }
+        },
+        {
+            "data": 72,
+            "tgt": {
+                "process": "math/Multiply_rnkbi",
+                "port": "multiplier"
+            }
+        }
+    ]
 }
